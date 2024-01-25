@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./LogingSingup.css";
+import "./LoginSignUp.css";
 import user_icon from "../Assets/person.png";
 import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
 
-const LogingSingup = () => {
+const LoginSignup = () => {
   const [action, setAction] = useState("Login");
 
   return (
@@ -14,7 +14,7 @@ const LogingSingup = () => {
         <div className="underline"></div>
       </div>
       <div className="inputs">
-        {action === "Loging" ? (
+        {action === "Login" ? (
           <div></div>
         ) : (
           <div className="input">
@@ -31,7 +31,7 @@ const LogingSingup = () => {
           <input type="password" placeholder="Password" />
         </div>{" "}
       </div>
-      {action === "Sing Up" ? (
+      {action === "Sign Up" ? (
         <div></div>
       ) : (
         <div className="forgot-password">
@@ -49,16 +49,16 @@ const LogingSingup = () => {
           Sign Up
         </div>
         <div
-          className={action === "Sing Up" ? "sumit gray" : "submit"}
+          className={action === "Sign Up" ? "submit gray" : "submit"}
           onClick={() => {
-            setAction("Loging");
+            setAction("Login");
           }}
         >
-          Loging
+          Login
         </div>
       </div>
     </div>
   );
 };
 
-export default LogingSingup;
+export default LoginSignup;
